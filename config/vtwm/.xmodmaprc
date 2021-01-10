@@ -1,0 +1,30 @@
+! a trivial example (as cute as this looks, it doesn't work ...)
+!keycode 142 = Escape bracketleft 5 asciitilde
+!keysym Prior = Escape bracketleft 5 asciitilde
+
+! make the comma and period keys do the right stuff when shifted
+!keysym comma = comma less
+!keysym period = period greater
+
+! bring back the escape key
+!keysym quoteleft = Escape Escape
+
+! recover the two special characters on the escape key
+!keycode 201 = quoteleft asciitilde
+
+! turn the useless caps lock key into a control key
+clear Lock
+keysym Caps_Lock = Control_L
+add Control = Control_L
+
+! turn the "backspace" key into a delete
+!keysym BackSpace = Delete
+
+! make Find, Select, and Remove DTRT
+keysym Home = Find
+keysym End = Select
+keycode 107 = apLineDel
+
+! make Help and Do DTRT
+keycode 120 = Help
+keycode 121 = Menu
