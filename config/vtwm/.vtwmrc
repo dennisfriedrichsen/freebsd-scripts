@@ -1,0 +1,195 @@
+#
+o$XConsortium: .twmrc,v 1.0 94/09/12 11:33:47 trf Exp $
+# 
+# Terry's vtwm configuration file
+#
+# Users should tailor this file, providing any extra title buttons, menus, etc.
+# that may be appropriate for their environment.  For example, if most of the
+# users were accustomed to uwm, the defaults could be set up not to decorate
+# any windows and to use meta-keys.
+#
+
+AutoRaise
+
+# 3w x 2h desktop on a 1824x984 screen (5472w x 1968h) / 16 
+VirtualDesktop "342x123+0+670" 16
+
+RightTitleButton "menu12" = f.menu "windowmenu"
+
+NoGrabServer
+DecorateTransients
+TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+MenuFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+#ClientBorderWidth
+OpaqueMove
+
+XORvalue 1			# tend to use visually distinct adjacent colors
+
+RestartPreviousState		# reiconify iconified things on startup
+
+
+Color
+{
+    BorderColor "grey70"
+    DefaultBackground "maroon"
+    DefaultForeground "gray85"
+    TitleBackground "white"
+    TitleForeground "black"
+    MenuBackground "dark green"
+    MenuForeground "gray85"
+    MenuTitleBackground "gray70"
+    MenuTitleForeground "dark green"
+    IconBackground "NavyBlue"
+    IconForeground "gray85"
+    IconBorderColor "gray85"
+    IconManagerBackground "maroon"
+    IconManagerForeground "gray85"
+}
+
+
+#
+# Define some useful functions for motion-based actions.
+#
+MoveDelta 3
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+
+#
+# Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
+#
+Button1 = : root : f.menu "twmops"
+Button2 = : root : f.menu "windowops"
+Button3 = : root : f.menu "TwmWindows"
+
+Button1 = m : window|icon : f.function "move-or-lower"
+Button2 = m : window|icon : f.iconify
+Button3 = m : window|icon : f.function "move-or-raise"
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.raiselower
+
+Button1 = : icon : f.function "move-or-iconify"
+Button2 = : icon : f.iconify
+
+Button1 = : iconmgr : f.iconify
+Button2 = : iconmgr : f.iconify
+
+"Up" = 	c		: all	 		: f.panup "100"
+"Down" = c		: all			: f.pandown "100"
+"Left" = c		: all	 		: f.panleft "100"
+"Right" = c		: all	 		: f.panright "100"
+
+#
+# And a menu with the usual things
+#
+menu "windowops"
+{
+"Twm"		f.title
+"Iconify"	f.iconify
+"Resize"	f.resize
+"Move"		f.move
+"Raise"		f.raise
+"Lower"		f.lower
+""		f.nop
+"Focus"		f.focus
+"Unfocus"	f.unfocus
+""		f.nop
+"Show Iconmgr"	f.showiconmgr
+"Hide Iconmgr"	f.hideiconmgr
+""		f.nop
+"Kill"		f.destroy
+"Delete"	f.delete
+}
+
+
+menu "windowmenu"
+{
+"Resize"		f.resize
+"Iconify"		f.iconify
+"RaiseLower"		f.raiselower
+"Refresh"		f.winrefresh
+"Focus"			f.focus
+"Identify"		f.identify
+"Save"			f.saveyourself
+"Send Delete"		f.delete
+"Kill Window"		f.destroy
+""			f.nop
+"Zoom"			f.menu "zoom"
+}
+
+
+menu "twmops"			# convenient application startups
+{
+"System"		f.title
+"console"		!"xconsole &"
+""			f.nop
+"twotoo"		!"twotoo"
+"uplift"		!"uplift"
+"venus"			!"venus"
+"hackbox"		!"hackbox"
+""			f.nop
+"Chromium"		!"runChromium"
+"emacs"			!"runemacs"
+"xcalc"			!"runxcalc"
+""			f.nop
+"xload"			!"xload -bg black -geom 180x85 -display venus:0 &"
+"xsky"			!"runxsky"
+"colormix"		!"runcolormix"
+"ghostview"		!"runghostview"
+""			f.nop
+"Restart VTwm"		f.restart
+"Exit VTwm"		f.quit
+}
+
+
+
+NailedDown			# keep the icon managers
+{
+  "Dclock"
+  "Clock"
+  "xbiff"
+  "xlogo"
+  "xload"
+  "TWM Icon Manager"
+  "VTWM Desktop"
+}
+
+
+NoTitle				# little programs that look like icons
+{
+  "Dclock"
+  "Clock"
+  "xbiff"
+  "xload"
+  "xlogo"
+  "TWM Icon Manager"
+  "VTWM Desktop"
+}
+
+
+DontShowInDisplay		# keep the desktop display uncluttered
+{
+  "Dclock"
+  "Clock"
+  "xbiff"
+  "xlogo"
+  "xload"
+  "Virtual Desktop"
+}
+
+
+IconManagerDontShow		# but ignore these windows
+{
+  "Dclock"
+  "Clock"
+  "xbiff"
+  "xlogo"
+  "Virtual Desktop"
+  "xclock"
+  "xload"
+  "xconsole"
+}
