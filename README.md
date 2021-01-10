@@ -1,2 +1,2 @@
 # freebsd-scripts
-Misc scripts related to freebsd
+Misc scripts related to FreeBSD
