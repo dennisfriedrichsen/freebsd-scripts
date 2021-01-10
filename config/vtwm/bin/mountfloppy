@@ -1,0 +1,2 @@
+#! /bin/csh
+mount -v -t msdos -r /dev/fd0c /floppy

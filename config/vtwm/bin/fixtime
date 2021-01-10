@@ -1,0 +1,3 @@
+#! /bin/csh
+/usr/sbin/ntpdate -bd time.nist.gov
+/usr/sbin/ntpdate -bs time.nist.gov

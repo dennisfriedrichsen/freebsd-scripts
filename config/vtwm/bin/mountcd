@@ -1,0 +1,2 @@
+#! /bin/csh
+mount -v -t cd9660 -r /dev/acd0c /cdrom
