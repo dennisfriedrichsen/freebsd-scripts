@@ -127,19 +127,25 @@ menu "twmops"			# convenient application startups
 "System"		f.title
 "console"		!"xconsole &"
 ""			f.nop
-"twotoo"		!"twotoo"
-"uplift"		!"uplift"
-"venus"			!"venus"
-"hackbox"		!"hackbox"
+"cerium"		!"cerium"
+"ignition"		!"ignition"
+"mercury"			!"mercury"
+"rubidium"		!"rubidium"
 ""			f.nop
-"Chromium"		!"runChromium"
-"emacs"			!"runemacs"
-"xcalc"			!"runxcalc"
+"Chromium"	!"runChromium"
+"emacs"			!"emacs &"
+"xcalc"			!"xcalc &"
+"LeafPad"   !"leafpad &"
+"GIMP"      !"gimp &"
 ""			f.nop
 "xload"			!"xload -bg black -geom 180x85 -display venus:0 &"
 "xsky"			!"runxsky"
 "colormix"		!"runcolormix"
 "ghostview"		!"runghostview"
+""      f.nop
+"FixTime"     !"fixtime"
+"MountCD"     !"mountcd"
+"MountFloppy" !"mountfloppy"
 ""			f.nop
 "Restart VTwm"		f.restart
 "Exit VTwm"		f.quit
