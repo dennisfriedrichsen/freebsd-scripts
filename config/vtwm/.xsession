@@ -20,5 +20,5 @@
 # '-adobe-new century schoolbook-bold-r-normal--11-80-100-100-p-66-iso8859-1' &
 #endif
 /usr/local/bin/xset s 150 150 c off
-#/usr/local/bin/xmodmap .xmodmaprc
+/usr/local/bin/xmodmap .xmodmaprc
 /usr/local/bin/xterm -geometry 80x24+0+0 -n login -ls
