@@ -3,7 +3,6 @@
 /usr/local/bin/xhost rubidium
 /usr/local/bin/vtwm < ~/.vtwmrc & #; sleep 2
 #/usr/local/bin/X11/xphoon -b -t 720 &
-#/usr/X11R6/bin/xbiff -geometry +84+440 &
 /usr/local/bin/xterm \
 	-fn -dec-terminal-medium-r-narrow--14-140-75-75-c-60-iso8859-1 \
 			-geometry 80x55+1330+0 -j -s -bg Black -fg white \

@@ -155,7 +155,6 @@ NailedDown			# keep the icon managers
 {
   "Dclock"
   "Clock"
-  "xbiff"
   "xlogo"
   "xload"
   "TWM Icon Manager"
@@ -167,7 +166,6 @@ NoTitle				# little programs that look like icons
 {
   "Dclock"
   "Clock"
-  "xbiff"
   "xload"
   "xlogo"
   "TWM Icon Manager"
@@ -179,7 +177,6 @@ DontShowInDisplay		# keep the desktop display uncluttered
 {
   "Dclock"
   "Clock"
-  "xbiff"
   "xlogo"
   "xload"
   "Virtual Desktop"
@@ -190,7 +187,6 @@ IconManagerDontShow		# but ignore these windows
 {
   "Dclock"
   "Clock"
-  "xbiff"
   "xlogo"
   "Virtual Desktop"
   "xclock"
