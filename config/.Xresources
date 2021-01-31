@@ -1,3 +1,4 @@
+! Taken from https://aduros.com/blog/xterm-its-better-than-you-thought/
 ! Sensible defaults
 XTerm.vt100.locale: false
 XTerm.vt100.utf8: true
