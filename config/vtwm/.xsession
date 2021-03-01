@@ -13,7 +13,7 @@
 /usr/local/bin/xlogo -geometry 80x60+0+440 -bg darkgreen -fg white -bd white &
 /usr/local/bin/xload -bg red4 -geometry 200x85+0+505 &
 /usr/local/bin/dclock -geometry 200x75+0+592 -fg white -bg red3 -led_off red3 \
-			-miltime -noscroll -date "%m %d %Y" -fn 10x20 &
+			-miltime -noscroll -date "%m %d %Y" -fn 10x20 -noutc &
 #if ($DISPLAY == ":0") then
 # /usr/local/bin/xconsole -geometry 1100x70+0+884 -fn \
 #   '-adobe-new century schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1' &
