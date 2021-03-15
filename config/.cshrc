@@ -14,7 +14,7 @@ alias ll        ls -lA
 # A righteous umask
 umask 22
 
-set path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin /usr/X11R6/bin $HOME/bin)
+set path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin $HOME/bin)
 
 setenv  EDITOR  vi
 setenv  PAGER   more
@@ -31,7 +31,7 @@ if ($?prompt) then
                 bindkey -k up history-search-backward
                 bindkey -k down history-search-forward
 
-        set prompt = "% "
+        # set prompt = "% "
 
         endif
 endif
