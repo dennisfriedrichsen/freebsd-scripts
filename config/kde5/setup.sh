@@ -5,4 +5,4 @@ sudo sysrc dbus_enable=YES
 sudo sysrc hald_enable=YES
 sudo sysrc sddm_enable=YES
 
-cp -pRvf ../.cshrc ~/
+#cp -pRvf ../.cshrc ~/
