@@ -1,0 +1,13 @@
+FreeBSD XFCE:
+
+#packages to install
+sudo pkg install xorg
+sudo pkg install slim
+sudo pkg install xfce4
+
+#add to rc.conf
+sudo sysrc dbus_enable="YES"
+sudo sysrc slim_enable="YES"
+
+#add to .xinitrc
+echo ". /usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc

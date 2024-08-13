@@ -1,0 +1,15 @@
+FreeBSD MATE:
+
+sudo pkg install xorg
+sudo pkg install slim
+sudo pkg install mate
+
+sudo sysrc dbus_enable="YES"
+sudo sysrc slim_enable="YES"
+#sudo sysrc hald_enable="YES"
+
+#add to /etc/fstab
+proc	/proc	procfs	rw	0	0
+
+#add to .xinitrc
+exec mate-session
